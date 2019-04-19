@@ -1,3 +1,6 @@
+* Fri Apr 19 2019 Oleg Girko <ol@infoserver.lv> - 0.1.4-4
+- Use %{__python2} macro for Python interpreter to build scripts.
+
 * Tue Nov 26 2013 Oleg Girko <ol@infoserver.lv> - 0.1.4-3
 - Use %{__python} macro for Python interpreter to build scripts.
 

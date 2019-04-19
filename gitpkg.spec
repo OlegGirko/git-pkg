@@ -28,7 +28,7 @@ Requires:   spectacle
 Requires:   grep
 Requires:   coreutils
 Requires:   findutils
-BuildRequires:  python
+BuildRequires:  python2-devel
 
 %description
 Allows the packaging to be maintained in a discrete git tree in the same git repo as the source
@@ -54,7 +54,7 @@ Uses gitpkg to retrieve source
 # << build pre
 
 
-PYTHON=%{__python} make %{?jobs:-j%jobs}
+PYTHON=%{__python2} make %{?jobs:-j%jobs}
 
 # >> build post
 # << build post
@@ -63,7 +63,7 @@ PYTHON=%{__python} make %{?jobs:-j%jobs}
 rm -rf %{buildroot}
 # >> install pre
 # << install pre
-PYTHON=%{__python} %make_install
+PYTHON=%{__python2} %make_install
 
 # >> install post
 # << install post
@@ -76,8 +76,8 @@ PYTHON=%{__python} %make_install
 %{_bindir}/gp_mkpkg
 %dir %{_datadir}/gitpkg/
 %{_datadir}/gitpkg/gp_common
-%{python_sitelib}/BlockDumper.*
-%{python_sitelib}/gitpkg-0.0.2-py2.7.egg-info
+%{python2_sitelib}/BlockDumper.*
+%{python2_sitelib}/gitpkg-0.0.2-py2.7.egg-info
 # >> files
 # << files
 
