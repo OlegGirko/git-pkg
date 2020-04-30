@@ -45,11 +45,11 @@ def git(*args, **kwargs):
 
 def log(msg):
     if args.verbose:
-	print(msg)
+        print(msg)
 
 def fail(msg, *args):
     """Report an error message and exit with failure"""
-    print >>sys.stderr, 'ERROR:', msg % args
+    sys.stderr.write('ERROR:' + msg % args + '\n')
     sys.exit(1)
 
 def checkout_packaging_branch(pkg, force):
@@ -229,20 +229,20 @@ def apply_patches_to_spec(args, p, specfilename):
 
         if re.search(r'^%setup', line):
             if done_setup:
-                print "WARNING: multiple %setups found - please check patches are in the right place in spec"
+                print("WARNING: multiple %setups found - please check patches are in the right place in spec")
             else:
                 done_setup = True
                 if args.setup_src and not re.search(r'-n src(/s+.)?', line):
-                    print "Adjusting %setup since git-pkg unpacks to src/ and there's no -n src in %setup"
+                    print("Adjusting %setup since git-pkg unpacks to src/ and there's no -n src in %setup")
                     spec_new.extend("# Adjusting %%setup since git-pkg unpacks to src/\n")
                     spec_new.extend("# %s" % re.sub(r'%', '%%', line))
-                    print line.strip()
+                    print(line.strip())
                     line,c = re.subn(r'-n\s*\S*', r'-n src', line)
                     if c == 0:
                         line = line.strip() + " -n src\n"
                      
-                    print "converted to"
-                    print line.strip()
+                    print("converted to")
+                    print(line.strip())
                 # Now output modified or orig %setup and any patches
                 spec_new.extend(line)
                 spec_new.extend(p.spec_patches)

@@ -23,7 +23,7 @@ try:
     with open('version.py') as f: exec(f.read())
     version=__version__
 except IOError:
-    print 'WARNING: Cannot write version number file'
+    print('WARNING: Cannot write version number file')
 
 setup(name='gitpkg',
       version = version,

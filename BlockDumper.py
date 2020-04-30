@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 # This is part of the Mer git-packaging suite
 # 
 # It provides a Dumper class which, as a side-effect, also modifies
