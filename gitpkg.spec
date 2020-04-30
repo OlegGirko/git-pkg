@@ -24,7 +24,6 @@ Patch1:     0001-Add-url-parameter-to-allow-gitpkg-service-to-use-rep.patch
 Requires:   git
 Requires:   pristine-tar
 Requires:   python-yaml
-Requires:   spectacle
 Requires:   grep
 Requires:   coreutils
 Requires:   findutils
