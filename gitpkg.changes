@@ -1,4 +1,7 @@
-* Thu Apr 30 2030 Oleg Girko <ol@infoserver.lv> - 0.1.4-5
+* Wed Mar 23 2030 Oleg Girko <ol@infoserver.lv> - 0.1.4-6
+- Add patch to use https protocol instead of git one.
+
+* Thu Apr 30 2020 Oleg Girko <ol@infoserver.lv> - 0.1.4-5
 - Port to Python 3.
 
 * Fri Apr 19 2019 Oleg Girko <ol@infoserver.lv> - 0.1.4-4

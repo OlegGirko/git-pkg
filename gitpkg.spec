@@ -23,6 +23,7 @@ Source100:  gitpkg.yaml
 Patch1:     0001-Add-url-parameter-to-allow-gitpkg-service-to-use-rep.patch
 Patch2:     0002-Remove-shebang-in-BlockDumper-Python-module.patch
 Patch3:     0003-Make-code-Python-3-compatible.patch
+Patch4:     0004-Use-https-protocol-instead-of-git-one.patch
 Requires:   git
 Requires:   pristine-tar
 Requires:   python3-yaml
@@ -48,6 +49,7 @@ Uses gitpkg to retrieve source
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 
 # >> setup
 # << setup
