@@ -117,9 +117,9 @@ fi
 if [ -z "$URL" ]; then
   case "$SVC" in
     github)
-        URL="git://github.com/${REPO}.git" ;;
+        URL="https://github.com/${REPO}.git" ;;
     gitorious)
-        URL="git://gitorious.org/${REPO}.git" ;;
+        URL="https://gitorious.org/${REPO}.git" ;;
     mer)
         URL="http://gitweb.merproject.org/gitweb/${REPO}.git/" ;;
     *)
