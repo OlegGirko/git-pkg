@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 
 import os, sys
-from distutils.core import setup
 try:
     import setuptools
     # enable "setup.py develop", optional
+    from setuptools import setup
 except ImportError:
-    pass
+    from distutils.core import setup
 
 if 'install' in sys.argv and \
    'MAKEFLAGS' not in os.environ and \
