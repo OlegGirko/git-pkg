@@ -1,4 +1,7 @@
-* Wed Mar 23 2030 Oleg Girko <ol@infoserver.lv> - 0.1.4-6
+* Thu Oct 05 2023 Oleg Girko <ol@infoserver.lv> - 0.1.4-7
+- Add patch to import setup from setuptools, not distutils.core.
+
+* Wed Mar 23 2022 Oleg Girko <ol@infoserver.lv> - 0.1.4-6
 - Add patch to use https protocol instead of git one.
 
 * Thu Apr 30 2020 Oleg Girko <ol@infoserver.lv> - 0.1.4-5

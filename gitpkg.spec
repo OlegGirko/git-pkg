@@ -24,6 +24,7 @@ Patch1:     0001-Add-url-parameter-to-allow-gitpkg-service-to-use-rep.patch
 Patch2:     0002-Remove-shebang-in-BlockDumper-Python-module.patch
 Patch3:     0003-Make-code-Python-3-compatible.patch
 Patch4:     0004-Use-https-protocol-instead-of-git-one.patch
+Patch5:     0005-Import-setup-from-setuptools-not-distutils.core.patch
 Requires:   git
 Requires:   pristine-tar
 Requires:   python3-yaml
@@ -31,6 +32,7 @@ Requires:   grep
 Requires:   coreutils
 Requires:   findutils
 BuildRequires:  python3-devel
+BuildRequires:  python3-setuptools
 
 %description
 Allows the packaging to be maintained in a discrete git tree in the same git repo as the source
@@ -50,6 +52,7 @@ Uses gitpkg to retrieve source
 %patch2 -p1
 %patch3 -p1
 %patch4 -p1
+%patch5 -p1
 
 # >> setup
 # << setup
