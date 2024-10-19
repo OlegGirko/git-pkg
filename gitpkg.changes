@@ -1,3 +1,6 @@
+* Sat Oct 19 2024 Oleg Girko <ol@infoserver.lv> - 0.1.4-8
+- Use %autosetup instead of manually applying every patch.
+
 * Thu Oct 05 2023 Oleg Girko <ol@infoserver.lv> - 0.1.4-7
 - Add patch to import setup from setuptools, not distutils.core.
 
